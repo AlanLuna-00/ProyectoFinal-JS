@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.bg-image {
+    height: 100vh;
+    background-image: url(images/bg-image.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    border-bottom: 1px solid rgb(0, 0, 0);
+
+}
+
+.myModal {
+    display: none; 
+    position: fixed;
+    z-index: 10;
+    top: 30%;
+    left: 32%;
+    width: 40%;
+    height: auto;
+    background-color: white;
+    margin:auto;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.5);
+}
+
+
+.myModal.active {
+    display: block;
+}
+
+
+
+

@@ -3,9 +3,17 @@ $(cards).on('click', (e) => {
 })
 
 const addToCart = (e) => {
-    const buttonChecked = e.target.classList.contains('btn')
+    const buttonChecked = e.target.classList.contains('buttonBuy')
     buttonChecked ? setCart(e.target.parentElement) : null;
-
+    if (buttonChecked) {
+        Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Producto agregado al carrito',
+            showConfirmButton: false,
+            timer: 1000
+          })
+    }
     e.stopPropagation()
 }
 
@@ -15,7 +23,7 @@ items.addEventListener('click', (e) => {
 
 const setCart = (object) => {
     const productCart = {
-        id: object.querySelector('.btn').dataset.id,
+        id: object.querySelector('.buttonBuy').dataset.id,
         title: object.querySelector('h5').textContent,
         precio : object.querySelector('p').textContent,
         cantidad : 1
@@ -41,7 +49,7 @@ const showCart = () => {
         fragment.appendChild(clone)
     })
     items.appendChild(fragment)
-
+    
     showFooter()
 
     localStorage.setItem('carrito', JSON.stringify(carrito))
@@ -60,6 +68,8 @@ const showFooter = () => {
 
     footerTemplate.querySelector('.total-products').textContent = nQuantity
     footerTemplate.querySelector('span').textContent = nPrice
+    // Contador productos al lado del carrito
+    document.querySelector('.numeroItems').textContent = nQuantity
 
     const clone = footerTemplate.cloneNode(true)
     fragment.appendChild(clone)

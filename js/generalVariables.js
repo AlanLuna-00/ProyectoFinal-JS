@@ -8,3 +8,5 @@ const fragment = document.createDocumentFragment()
 
 
 let carrito = {}
+
+let buttonBuy = document.querySelectorAll('.buttonBuy')
