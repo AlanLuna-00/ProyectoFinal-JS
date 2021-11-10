@@ -9,7 +9,9 @@
     background-image: url(images/bg-image.jpg);
     background-size: cover;
     background-attachment: fixed;
-    border-bottom: 1px solid rgb(0, 0, 0);
+    box-shadow: -1px 42px 5px -1px rgba(0,0,0,0.72);
+    -webkit-box-shadow: -1px 42px 5px -1px rgba(0,0,0,0.72);
+    -moz-box-shadow: -1px 42px 5px -1px rgba(0,0,0,0.72);
 
 }
 
@@ -33,6 +35,22 @@
     display: block;
 }
 
+.nav-link:hover {
+    color:#ccc;
+
+}
+
+footer {
+    background: #1c1c1c;
+}
+
+.navfooter li a {
+    color: #fff;
+    font-size: 30px;
+}
+.navfooter li a:hover {
+    color: #ccc;
+}
 
 
 

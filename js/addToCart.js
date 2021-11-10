@@ -7,10 +7,11 @@ const addToCart = (e) => {
     buttonChecked ? setCart(e.target.parentElement) : null;
     if (buttonChecked) {
         Swal.fire({
-            position: 'top-end',
+            position: 'top-start',
             icon: 'success',
             title: 'Producto agregado al carrito',
             showConfirmButton: false,
+            toast: true,
             timer: 1000
           })
     }
