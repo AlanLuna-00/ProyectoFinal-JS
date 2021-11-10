@@ -5,7 +5,8 @@ $('.nav-link').on('click', function() {
 let emailInput = $('#floatingEmail').val();
 let nameInput = $('#floatingName').val();
 
-$('#buttonConfirm').on('click', () => {
+$('#buttonConfirm').on('click', (e) => {
+    e.preventDefault();
     Swal.fire({
         position: 'center',
         icon: 'success',
