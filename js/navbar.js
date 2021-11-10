@@ -2,16 +2,15 @@ $('.nav-link').on('click', function() {
     $('navbar-collapse').collapse('hide');  
 })
 
-let emailInput = $('#floatingEmail').val();
-let nameInput = $('#floatingName').val();
-
+let emailInput = $('#floatingEmail')
+let nameInput = $('#floatingName')
 $('#buttonConfirm').on('click', (e) => {
     e.preventDefault();
     Swal.fire({
         position: 'center',
         icon: 'success',
-        title: `Gracias por su compra`,
-        text: 'Le hemos enviado un Email con los pasos a seguir',
+        title: `Gracias por su compra ${nameInput.val()}`,
+        text: `Le hemos enviado un Email a ${emailInput.val()} con los pasos a seguir`,
         showConfirmButton: false,
         timer: 2000,
         footer: 'SportShoes - Todos los derechos reservados ©'
