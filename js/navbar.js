@@ -1,7 +1,6 @@
-$('.nav-link').on('click', function() {
-    $('navbar-collapse').collapse('hide');  
-})
-
+$('.navbar-nav>li>a').on('click', function(){
+    $('.navbar-collapse').collapse('hide');
+});
 let emailInput = $('#floatingEmail')
 let nameInput = $('#floatingName')
 $('#buttonConfirm').on('click', (e) => {
