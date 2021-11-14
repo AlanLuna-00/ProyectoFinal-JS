@@ -4,10 +4,24 @@ const showCard = data => {
         cardTemplate.querySelector('p').textContent = `$ ${product.precio}`
         cardTemplate.querySelector('img').setAttribute('src', product.image)
         cardTemplate.querySelector('.btn').dataset.id = product.id
-        cardTemplate.querySelector('.card').setAttribute('category', product.category)
+        cardTemplate.querySelector('.cardContainer').setAttribute('category', product.category)
 
         const clone = cardTemplate.cloneNode(true)
         fragment.appendChild(clone)
     })
     cards.appendChild(fragment)
 }
+
+
+
+$('#filterDeportiva').on('click', () => {
+    $('.cardContainer[category="Informal"]').removeClass('card-none')
+    $('.cardContainer[category="Informal"]').addClass('card-none')
+})  
+$('#filterInformal').on('click', () => {
+    $('.cardContainer[category="Informal"]').removeClass('card-none')
+    $('.cardContainer[category="Deportiva"]').addClass('card-none')
+})  
+$('#filterAll').on('click', () => {
+    $('.cardContainer').removeClass('card-none')
+})  

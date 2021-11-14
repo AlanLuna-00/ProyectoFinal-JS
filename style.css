@@ -36,6 +36,14 @@
     display: block;
 }
 
+.card-none {
+    display: none;
+}
+
+.filter {
+    cursor: pointer;
+}
+
 .nav-link:hover {
     color:#ccc;
 
