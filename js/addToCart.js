@@ -25,7 +25,7 @@ items.addEventListener('click', (e) => {
 const setCart = (object) => {
     const productCart = {
         id: object.querySelector('.buttonBuy').dataset.id,
-        title: Number(object.querySelector('h5').textContent.replace('$','')),
+        title: object.querySelector('h5').textContent,
         precio : object.querySelector('p').textContent,
         cantidad : 1
     }
