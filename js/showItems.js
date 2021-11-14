@@ -12,16 +12,14 @@ const showCard = data => {
     cards.appendChild(fragment)
 }
 
-
-
-$('#filterDeportiva').on('click', () => {
-    $('.cardContainer[category="Informal"]').removeClass('card-none')
-    $('.cardContainer[category="Informal"]').addClass('card-none')
-})  
-$('#filterInformal').on('click', () => {
-    $('.cardContainer[category="Informal"]').removeClass('card-none')
-    $('.cardContainer[category="Deportiva"]').addClass('card-none')
-})  
-$('#filterAll').on('click', () => {
-    $('.cardContainer').removeClass('card-none')
-})  
+$(function () {
+    $('.filter').on('click', function () {
+        let category = $(this).attr('category')
+        if (category === 'all') {
+            $('.cardContainer').show()
+        } else {
+            $('.cardContainer').hide()
+            $(`.cardContainer[category="${category}"]`).show()
+        }
+    })
+})
