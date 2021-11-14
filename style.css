@@ -36,12 +36,13 @@
     display: block;
 }
 
-.card-none {
-    display: none;
-}
-
 .filter {
     cursor: pointer;
+}
+
+.dropdown-menu {
+    position: relative;
+    left: 20%;
 }
 
 .nav-link:hover {

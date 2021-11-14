@@ -11,7 +11,7 @@ $('#buttonConfirm').on('click', (e) => {
         title: `Gracias por su compra ${nameInput.val()}`,
         text: `Le hemos enviado un Email a ${emailInput.val()} con los pasos a seguir`,
         showConfirmButton: false,
-        timer: 2000,
+        timer: 3500,
         footer: 'SportShoes - Todos los derechos reservados ©'
       })
 })
