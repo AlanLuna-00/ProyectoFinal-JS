@@ -14,4 +14,5 @@ $('#buttonConfirm').on('click', (e) => {
         timer: 3500,
         footer: 'SportShoes - Todos los derechos reservados ©'
       })
+    carrito = {}
 })

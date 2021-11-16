@@ -50,6 +50,33 @@
 
 }
 
+.cartMobile {
+    position: fixed;
+    bottom: 2%;
+    right: 2%;
+    z-index: 10;
+
+}
+
+.cartMobile button {
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all 1.5s;
+
+}
+
+.cartMobile button i  {
+    font-size: 20px;
+}
+
+.cartMobile button:hover i {
+    transform: rotate(1080deg);
+}
+
+
 footer {
     background: #1c1c1c;
 }

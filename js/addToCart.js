@@ -71,6 +71,7 @@ const showFooter = () => {
     footerTemplate.querySelector('span').textContent = nPrice
     // Contador productos al lado del carrito
     document.querySelector('.numeroItems').textContent = nQuantity
+    document.querySelector('.numeroItemsMobile').textContent = nQuantity
 
     const clone = footerTemplate.cloneNode(true)
     fragment.appendChild(clone)
